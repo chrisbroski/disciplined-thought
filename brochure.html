@@ -1,9 +1,30 @@
 <!doctype html>
 <html lang="en-us">
 <title>Disciplined Thought - Trifold Brochure</title>
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif|Roboto:900" rel="stylesheet">
 <style>
+/*
+font-family: 'Roboto', sans-serif;
+font-family: 'Noto Serif', serif;
+*/
 * {
     box-sizing: border-box;
+}
+html {
+    font-family: 'Noto Serif', serif;
+}
+h1, h2, h3, h4, h5 {
+    font-family: 'Roboto', sans-serif;
+    margin: 0.5em 0;
+}
+h1 {
+    font-size: 24pt;
+}
+h2 {
+    font-size: 22pt;
+}
+h3 {
+    font-size: 18pt;
 }
 article {
     width: 10in;
@@ -15,9 +36,12 @@ article > div {
     padding: 0 1em;
     position: relative;
     width: 33%;
-    min-height: 6in;
+    height: 7.5in;
     float: left;
     overflow: auto;
+}
+article > div > *:first-child {
+    margin-top: 0;
 }
 article > div:first-child {
     padding-left: 0;
@@ -26,16 +50,25 @@ article > div:last-child {
     padding-right: 0;
 }
 h6 {
+    margin: 0;
+    position: absolute;
     font-size: 12pt;
     text-align: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
-#line {
+#line, #triangle {
+    padding-left: 1em;
+}
+#line span {
     margin-left: 1em;
-    padding-left: 1.0in;
+    padding-left: 0.82in;
+    position: relative;
+    top: 0.8em;
     border-top: 1pt solid #000;
-    vertical-align: -40%;
 }
-#triangle {
+#triangle span {
     position: relative;
     left: 1em;
     top: -1em;
@@ -43,21 +76,37 @@ h6 {
     border-left: 5pt solid transparent;
     border-right: 5pt solid transparent;
 }
+table {
+    margin: 1em auto;
+}
+td {
+    padding: 0 0.5em;
+    text-align: center;
+}
+th {
+    font-size: 24px;
+}
+ol, ul {
+    margin: 1em; padding: 0;
+}
+li {
+    margin-left: 0.5em; padding-left: 0.2em;
+}
 </style>
 
 <article id="page1">
 <div>
-<h2>Warning</h2>
-<h3>Do Not Read Further If You Like Your Beliefs</h3>
+<h1>Warning!</h1>
+<h3>Do Not Read Further If You Like Your Beliefs.</h3>
 
-<p>After spotting nonsense becomes an easy habit, eventually it will aim back at yourself. You may discover that some of your favorite beliefs are not as great as you once thought. These may be beliefs that comfort you at night and motivate you through difficult days.
+<p>After recognizing nonsense becomes an easy habit for you, eventually it will point back at yourself. You may discover that some of your favorite beliefs are not as great as you once thought. These may be beliefs that comfort you at night and motivate you through difficult days.
 
-<p>Growing into a rational person can be an emotional and alienating experience as light is shown on your personal and cultural delusions. Don't begin the journey unless you are prepared.
+<p>Growing into a rational person can be an emotional and alienating experience as light is shown on your personal and cultural mythology. Don't begin the journey unless you are prepared.
 </div>
 
 <div>
 <h2>What is Disciplined Thought?</h2>
-<p><em>Disciplined Thought</em> is a system to focus on healthy and effective beliefs and decisions.
+<p><em>Disciplined Thought</em> is a system of thinking for acquiring accurate beliefs and making effective decisions.
 <p>Many books and courses about "critical thinking" and "skepticism" focus on how to debunk false claims. This is not a positive and constructive approach. Without a guide to finding positive concepts, we could engage in disproof forever and not find a single decent idea.
 <h6>www.disciplinedthought.com</h6>
 </div>
@@ -65,11 +114,13 @@ h6 {
 <div>
 <h1>Disciplined Thought</h1>
 <p>Powerful organizations spend billions of dollars to confuse and manipulate.
-<p>Unscrupulous salespeople, charlatans, and other financial predators will say and do whatever it takes to get your money.
+<p>Unscrupulous salespeople, charlatans, and other financial predators will say whatever it takes to get your money.
 
-<h2>Coping in the Disinformation Age</h2>
-<p>Our phones, computers, and televisions are connected to the greatest communication and information system the world has even known, and every day it fills with more unhelpful information. Some is actively harmful - designed to deliberately take advantage of others. But how can we separate sense and nonsense, truth and lies, between those that want to help you and those that cause misery and suffering?
-<p>Fake News ? Real News
+<h3>Coping with the Disinformation Age</h3>
+<p>Our phones, computers, and televisions are connected to the greatest information system the world has even known, and every day it fills with more unhelpful information. Some is actively harmful - designed to deliberately take advantage of others. But how can we separate sense and nonsense, truth and lies, between those that want to help you and those that cause misery and suffering?
+<table>
+    <tr><td>Fake<br>News<th>?<td>Real<br>News
+</table>
 <p>It isn't hopeless. There are simple and effective ways to tell beneficial ideas from harmful ones.
 </div>
 </article>
@@ -77,19 +128,20 @@ h6 {
 <article id="page2">
 <div>
 <h2>Observe</h2>
-<p>Observations of our world come in two types.
-<p><strong>Measurements</strong> are representations of a single property. A fact is a measurement corroborated by multiple independent observers.
-<p>This line is 1.0" long: <span id="line"></span>
+<p>There are two types of observations.
+<p><strong>Measurements</strong> are representations of a single property.
+<p id="line">This line is 0.82" long: <span></span>
+<p>A fact is a measurement confirmed by multiple independent observers.
 <p><strong>Identifications</strong> are for when a collection of measurements matches a definition.
-<p>This is a triangle: <span id="triangle"></span>
+<p id="triangle">This is a triangle: <span></span>
 <p>For an identification to become a fact it not only needs independent corroboration, but must also use a proper definition.
-<p>A proper definition has the following properties:
+<p>A proper definition must:
 <ul>
-<li>Stated in a clear and unambiguous way
-<li>Relies only on facts
-<li>No significant false examples
-<li>No significant true examples that don't fit the definition
-<li>Must be as simple as possible
+<li>Be stated in a clear and unambiguous way
+<li>Rely only on facts
+<li>Have no significant false examples
+<li>Have no significant true examples that don't fit the definition
+<li>Be as simple as possible
 </ul>
 </div>
 
@@ -97,7 +149,7 @@ h6 {
 <h2>Understand</h2>
 <p>We should strive to have accurate beliefs so the world we imagine is as close as possible to the real world.
 <p>A belief is a rule used to model our world.
-<p>An accurate belief is:
+<p>An accurate belief must be:
 <ul>
 <li>Based on at least one fact
 <li>Logically and unambiguously stated
